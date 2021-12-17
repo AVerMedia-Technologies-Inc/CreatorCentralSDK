@@ -1,0 +1,34 @@
+{
+    "Package": "Clock",
+	"Author": "AVerMedia",
+	"Widget Category": "com.avermedia.widget.js.clock",
+	"Title": "Clock 2ed (JS)",
+	"Subtitle": "Clock 2ed (JS)",
+	"Widget Version": "1.0",
+	"Runtime Information":  {
+		"mac": {
+			"Format": "web",
+			"Target": "index.html"
+		},
+		"win": {
+			"Format": "web",
+			"Target": "index.html"
+		}
+	},
+	"Property Path": "property/index.html",
+	"Type": "widget",
+	"Width": 1,
+	"Height": 1,
+	"Icon": "images/clock.svg",
+	"States": [
+		{
+			"Title": "Clock",
+			"Image": "images/clock.svg"
+		}
+	],
+	"Tooltip": "Widget Clock 2ed (JS)",
+	"Compatible": {
+		"SDK Version": "1.0",
+		"App Version": "1.1"
+	}
+}
