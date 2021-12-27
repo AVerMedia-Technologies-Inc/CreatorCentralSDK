@@ -373,7 +373,10 @@ The Widget directory needs to be placed under "/Users/\<UserName>/Applications S
 ### Windows
 The Widget directory needs to be placed under "C:\\Users\\＜YourName＞\\AppData\\Roaming\\AVerMedia Creator Central\\widgets\\\<PackageName>\\".
 
+## Compatibility
 
+### Creator Central 
+Requires Creator Central v1.1.0.38 or later.
 
 ---
 
@@ -743,3 +746,8 @@ Widget 目錄需放置到"/Users/\<UserName>/Applications Support/AVerMedia Crea
 ### Windows
 
 Widget目錄需放置到"C:\\Users\\＜YourName＞\\AppData\\Roaming\\AVerMedia Creator Central\\widgets\\\<PackageName>\\"下
+
+## 相容性
+
+### Creator Central 
+需要 Creator Central v1.1.0.38 或之後的版本.
