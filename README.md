@@ -28,6 +28,16 @@ The Widget/Property developed by the developer will interact with Creator Centra
 <img src="images/03.png" width="80%" height="80%">
 </img>
 
+## package.json
+
+Every package has a [package.json](package.json) file providing the necessary information to help Creator Central to import it correctly.
+
+### Main
+| Members | Type | Description |
+| - | - | - |
+| uuid | Required | The unique identifier of the Package. It must be a uniform type identifier(UTI) that contains only lowercase alphanumeric characters (a-z, 0-9), hyphen (-), and period (.). It should be in reverse-DNS format. For example, if your package is the collection of System Resouce and your domain is avermedia.com, you could give it the string `com.avermedia.systemresources` as your package's unique identifier.  |
+| name | Required | The name of the package. This string is visible to the user in the Widget List. |
+| version | Required | Package's semantic version (1.0.0.0)  |
 
 ## WidgetConfig.json
 
@@ -402,6 +412,19 @@ Widget / Property透過jsonrpc的指令與Creator Central進行互動
 <img src="images/03.png" width="80%" height="80%">
 </img>
 
+## package.json
+
+Every package has a package.json file providing the necessary information to help Creator Central to import it correctly.
+
+每個package都有一個[package.json](package.json)用來提供必要資訊，讓Creator Central可以正確地匯入它.
+
+### Main
+
+| Members | Type | Description |
+| - | - | - |
+| uuid | Required | 這是Package的唯一識別碼. 必須是以反域名的樣式包含了小寫的英文字母，數字，連字號跟句數. 舉例來說，你的Package是系統資源的一組操作集合，並擁有一組域名avermedia.com，那麼你將可以使用com.avermedia.systemresources做為你的Package的唯一識別碼. |
+| name | Required | 這是Package的名字，會顯示在側邊欄的Widget List上. |
+| version | Required | Package的版號 (1.0.0.0) |
 
 ## WidgetConfig.json
 [WidgetConfig.json](WidgetConfig.json) 用來描述Widget所持有的資源以及在Creator Central所需顯示的相關資訊
