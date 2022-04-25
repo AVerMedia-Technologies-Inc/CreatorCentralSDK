@@ -414,8 +414,6 @@ Widget / Property透過jsonrpc的指令與Creator Central進行互動
 
 ## package.json
 
-Every package has a package.json file providing the necessary information to help Creator Central to import it correctly.
-
 每個package都有一個[package.json](package.json)用來提供必要資訊，讓Creator Central可以正確地匯入它.
 
 ### Main
