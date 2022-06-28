@@ -1,4 +1,4 @@
-Creator Central Package SDK V2
+Creator Central Package SDK V2.alpha
 ===
 
 ## [Terminology](Terminology.md)
@@ -7,4 +7,4 @@ Creator Central Package SDK V2
 ## [Event Received](EventsReceived.md)
 ## [Event Sent](EventsSent.md)
 ## [Registration Flow](RegistrationFlow.md)
-## [Creator Central Widget SDK](v1/)
+## [Creator Central SDK V1](v1/)
