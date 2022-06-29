@@ -111,7 +111,7 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
 | Description    | Required | Provides a general description of what the package does. This string will be displayed to the user in Creator Central Widget Store.|
 | Name           | Required | The name of the package. This string will be displayed to the user in the Widget List and Creator Central Widget Store both.|
 | UUID | Required | This is a unique identifier used to identify the package. The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. For example, a **System** package made by AVerMedia(avermedia.com). We suggest to use **com.avermedia.system** as the unique identifier. |
-| Icon | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both.|
+| Icon | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both. The Recommended image size is 75 x 54 in pixel. |
 | URL | Optional | A site to provide more information about the package.|
 | Version | Required | Package's semantic version (1.0.0)|
 | Runtime | Required | The relative path to the HTML/binary file containing the package code.|
@@ -122,7 +122,7 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
 
 | Member   | Type     | Description |
 | -------- | -------- | ----------- |
-| Icon     | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List. |
+| Icon     | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List. The Recommended image size is 75 x 54 in pixel. |
 | Name     | Required | The name of the widget. This string will be displayed to the user in the Widget List. |
 | States   | Required | Each widget can have one or more states. For example, the Mute widget may have two states, mute and unmute. Ask the action to change its state by sending a changeState event. |
 | Layouts   | Optional | Specifies an array of layouts. Each widget can have one or more layouts. For example, the Clock widget can have two different layouts. One is analog and another is digital. |
@@ -135,17 +135,26 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
 
 | Member | Type     | Description                      |
 | ------ | -------- | -------------------------------- |
-| Image  | Required | The default image for the state. |
+| Image  | Required | The default image for the state. The Recommended image size is 75 x 54 in pixel. |
 
 
 ### Layouts
 
-Creator Central supports multiple layouts defined by widgets in the package to meet functional needs. The unit of width and height is a grid on the panel. The total size of the panel is a 5 * 4 grid. This means you can use sizes from 1 * 1 to 5 * 4 to design your widgets to meet specific functional needs.
+Creator Central supports multiple layouts defined by widgets in the package to meet functional needs. The unit of width and height is a grid on the panel. The total size of the panel is a 5 * 4 grid. This means you can use sizes from 1 * 1 to 5 * 4 to design your widgets to meet specific functional needs. The reference image size is list as below.
+
+| Grid | Width \* Height |
+| 1x1 | 150 \* 108 |
+| 2x1 | 308 \* 108 |
+| 2x2 | 308 \* 224 |
+| 2x4 | 308 \* 456 |
+| 3x4 | 466 \* 456 |
+| 4x3 | 624 \* 340 |
+| 5x4 | 782 \* 456 |  
 
 | Members | Type | Description |
 | - | - | - |
 | Title | Required | The string will be shown on Widget List. |
-| Icon | Required | The image will be shown on Widget List. |
+| Icon | Required | The image will be shown on Widget List. The recommend image size is 120 x 120 in pixel. |
 | Width  | Required | The width of display view in grid.  |
 | Height | Required | The height of display view in grid. | 
 
