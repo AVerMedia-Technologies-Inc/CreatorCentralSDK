@@ -142,7 +142,9 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
 
 Creator Central supports multiple layouts defined by widgets in the package to meet functional needs. The unit of width and height is a grid on the panel. The total size of the panel is a 5 * 4 grid. This means you can use sizes from 1 * 1 to 5 * 4 to design your widgets to meet specific functional needs. The reference image size is list as below.
 
+
 | Grid | Width \* Height |
+| - | - |
 | 1x1 | 150 \* 108 |
 | 2x1 | 308 \* 108 |
 | 2x2 | 308 \* 224 |
