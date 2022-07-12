@@ -14,9 +14,9 @@ These events will be sent to Package. The Property View won't receive them.
 
 | Event | Description |
 | -------- | -------- |
-| keyDown | When the user presses a display view on the panel or a function key of AX devices, the package will receive the keyDown event. |
-| keyUp | When the user releases a display view on the panel or a function key of AX devices, the package will receive the keyUp event. |
-| widgetTriggered | When the user presses a display view and then releases within it, the package will receive the widgetTriggered event. |
+| actionDown | When the user presses a display view on the panel or a function key of AX devices, the package will receive the actionDown event. |
+| actionUp | When the user releases his finger from the panel or a function key of AX devices, the package will receive the actionUp event. |
+| actionTriggered | When the user presses a display view and then releases within it, the package will receive the actionTriggered event. |
 | widgetWillAppear | When an instance of a widget is displayed on Creator Central, for example, when the profile loaded, the package will receive a willAppear event. |
 | widgetWillDisappear | When switching profile, an instance of a widget will be invisible, the package will receive a willDisappear event. |
 | propertyViewDidAppear | When user selected a widget on the panel, the package will receive this event. |
@@ -35,9 +35,8 @@ The Property View will receive these events.
 var json = {
     "widget": "com.avermedia.example.widget1", 
     "event": "didReceiveWidgetSettings", 
-    "context": uniqueIdentifier, 
+    "context": <uniqueIdentifier>, 
     "payload": {<json data>}
-  }
 };
 ```
 
@@ -54,7 +53,6 @@ var json = {
 var json = {
     "event": "didReceivePackageSettings", 
     "payload": {<json data>}
-  }
 };
 ```
 
@@ -63,17 +61,16 @@ var json = {
 | event | didReceivePackageSettings |
 | payload | A json data contains persistently stored data. | 
 
-## keyDown
+## actionDown
 
 ``` json
 var json = {
     "widget": "com.avermedia.example.widget1",
-    "event": "keyDown", 
-    "context": uniqueIdentifier,
+    "event": "actionDown", 
+    "context": <uniqueIdentifier>,
     "payload": {
         "state": 0
     }
-  }
 };
 ```
 
@@ -92,17 +89,16 @@ The payload object contains the following members:
 | -------- | -------- |
 | state | Only set when the widget has multiple states. The 0-based value contains the current state of the action. |
 
-## keyUp
+## actionUp
 
 ``` json
 var json = {
     "widget": "com.avermedia.example.widget1",
-    "event": "keyUp", 
-    "context": uniqueIdentifier,
+    "event": "actionUp", 
+    "context": <uniqueIdentifier>,
     "payload": {
         "state": 0
     }
-  }
 };
 ```
 
@@ -119,24 +115,23 @@ The payload object contains the following members:
 | -------- | -------- |
 | state | Only set when the widget has multiple states. The 0-based value contains the current state of the action. |
 
-## widgetTriggered
+## actionTriggered
 
 ``` json
 var json = {
     "widget": "com.avermedia.example.widget1",
-    "event": "widgetTriggered", 
-    "context": uniqueIdentifier,
+    "event": "actionTriggered", 
+    "context": <uniqueIdentifier>,
     "payload": {
         "state": 0
     }
-  }
 };
 ```
 
 | Members | Description |
 | -------- | -------- |
 | widget | The widget's category. |
-| event | widgetTriggered |
+| event | actionTriggered |
 | context | The unique identifier used to identify the instance's widget. |
 | payload | A json object |
 
@@ -157,11 +152,10 @@ The package will receive this event when:
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "widgetWillAppear", 
-    "context": uniqueIdentifier,
+    "context": <uniqueIdentifier>,
     "payload": {
         "state": 0
     }
-  }
 };
 ```
 
@@ -187,11 +181,10 @@ The package will receive this event when:
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "widgetWillDisappear", 
-    "context": uniqueIdentifier,
+    "context": <uniqueIdentifier>,
     "payload": {
         "state": 0
     }
-  }
 };
 ```
 
@@ -214,8 +207,7 @@ The payload object contains the following members:
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "propertyViewDidAppear", 
-    "context": uniqueIdentifier
-  }
+    "context": <uniqueIdentifier>
 };
 ```
 
@@ -232,8 +224,7 @@ var json = {
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "propertyViewDidDisappear", 
-    "context": uniqueIdentifier
-  }
+    "context": <uniqueIdentifier>
 };
 ```
 
@@ -250,9 +241,8 @@ The package will receive a ```sendToPackage``` event when the property view send
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "sendToPackage", 
-    "context": uniqueIdentifier,
+    "context": <uniqueIdentifier>,
     "payload": {<json data>}
-  }
 };
 ```
 
@@ -272,9 +262,8 @@ The property view will receive a **sendToPropertyView** event when the package s
 var json = {
     "widget": "com.avermedia.example.widget1",
     "event": "sendToPropertyView", 
-    "context": uniqueIdentifier,
+    "context": <uniqueIdentifier>,
     "payload": {<json data>}
-  }
 };
 ```
 
