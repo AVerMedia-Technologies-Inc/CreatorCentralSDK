@@ -77,7 +77,7 @@ var json = {
 | Members | Description |
 | -------- | -------- |
 | widget | The widget's category. |
-| event | keyDown |
+| event | actionDown |
 | context | The unique identifier used to identify the instance's widget. |
 | payload | A json object |
 
@@ -105,7 +105,7 @@ var json = {
 | Members | Description |
 | -------- | -------- |
 | widget | The widget's category. |
-| event | keyUp |
+| event | actionUp |
 | context | The unique identifier used to identify the instance's widget. |
 | payload | A json object |
 
