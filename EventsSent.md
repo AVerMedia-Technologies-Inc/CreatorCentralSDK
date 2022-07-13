@@ -97,7 +97,7 @@ Please keep in your mind: when the package uses this API, the Property View will
 
 ## getPackageSettings
 
-The package and Property View can request the persistent data which available to every widget in the package using the **requestPackageSettings** event:
+The package and Property View can request the persistent data which available to every widget in the package using the **getPackageSettings** event:
 
 ``` json
 var json = {
