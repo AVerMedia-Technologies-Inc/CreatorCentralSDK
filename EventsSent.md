@@ -18,6 +18,11 @@ The following events is additional to package:
 | changeTitle | Change the title of an instance of a widget. |
 | changeImage | Change the image displayed by an instance of a widget. |
 | changeState | Apply the state to an instance of a widget. |
+| changeFontAttribute | Change the font attribute of an instance of widget. |
+| changeActionEffect | Apply the effect to an instance of a widget. |
+| getWidgetTitle | Request the title list of a widget. |
+| getWidgetIcon | Request the icon list of a widget. |
+| getFontAttribute | Request the font attribute of a widget. |
 | sendToPropertyView | Send a payload to the property view |
 
 The following events is additional to property view:
@@ -217,7 +222,7 @@ var json = {
 | Members | Description |
 | -------- | -------- |
 | event | changeState |
-| context | A value to identify the widget instance you want to modify |
+| context | A value to identify the widget instance you want to modify. |
 | payload | A json object |
 
 The payload object contains the following members:
@@ -225,6 +230,117 @@ The payload object contains the following members:
 | Payload | Description |
 | -------- | -------- |
 | state | A 0-based integer value representing the state of a widget with multiple states. |
+
+## changeFontAttribute
+The package can send a **changeFontAttribute** event to the Creator Central application to change the font attributes of widget.
+
+``` json
+var json = {
+	"event": "changeFontAttribute",
+	"context": uniqueIdentifier,
+	"payload": {
+		"family": "Arial",
+		"size": 18, # support 6 ~ 18
+		"color": "#ff8000",
+		"hAlignment": "left",
+		"bold": false,
+		"italic": false,
+		"underLine": false
+	}
+};
+```
+
+| Members | Description |
+| -------- | -------- |
+| event | changeFontAttribute |
+| context | A value to identify the widget instance you want to modify. |
+| payload | A json object |
+
+The payload object contains the following members:
+
+| Payload | Description |
+| -------- | -------- |
+| family | The font family for the widget title. |
+| size | The font size for the widget title. |
+| color | Title color. |
+| hAlignment | The horizontal alignment of the widget title. Support "left", "right" and "center" now. |
+| bold | Show the title with bold style. |
+| italic | Show the title with italic style. |
+| underLine | Show the title with underline style. |
+
+## changeActionEffect
+The package can send a **changeActionEffect** event to Creator Central application to change the effect displayed on the display view of widget.
+
+``` json
+var json = {
+	"event": "changeActionEffect",
+	"context": uniqueIdentifier,
+	"payload": {
+		"type": "press",
+		"image": <base64 encoded image>
+	}
+};
+```
+
+| Members | Description |
+| -------- | -------- |
+| event | changeActionEffect |
+| context | A value to identify the widget instance you want to modify. |
+| payload | A json object |
+
+The payload object contains the following members:
+
+| Payload | Description |
+| -------- | -------- |
+| type | The type of effect. Support "press", "clear", "invalid" and "inactive" now. |
+| image | The image to display encoded in base64 with the image format declared in the mime type. |
+
+## getWidgetTitle
+The package can request the title list of an instance of widget using the **getWidgetTitle** event.
+
+``` json
+var json = {
+	"event": "getWidgetTitle",
+	"context": uniqueIdentifier
+};
+``` 
+
+| Members | Description |
+| -------- | -------- |
+| event | getWidgetTitle |
+| context | A value to identify the widget instance you want to modify. |
+
+## getWidgetIcon
+
+The package can request the icon list of an instance of widget using the **getWidgetIcon** event.
+
+``` json
+var json = {
+	"event": "getWidgetIcon",
+	"context": uniqueIdentifier
+};
+``` 
+
+| Members | Description |
+| -------- | -------- |
+| event | getWidgetIcon |
+| context | A value to identify the widget instance. |
+
+## getFontAttribute
+
+The package can request the icon list of an instance of widget using the **getFontAttribute** event.
+
+``` json
+var json = {
+	"event": "getFontAttribute",
+	"context": uniqueIdentifier
+};
+``` 
+
+| Members | Description |
+| -------- | -------- |
+| event | getFontAttribute |
+| context | A value to identify the widget instance. |
 
 ## sendToPackage
 
@@ -246,6 +362,7 @@ var json = {
 | payload | A json object |
 
 The package will receive event ```sendToPackage``` containing the payload:
+
 ``` json
 var json = {
     "widget": "com.avermedia.example.widget1",
@@ -258,6 +375,7 @@ var json = {
 ## sendToPropertyView
 
 The package can send a payload to the Property View using the ```sendToPropertyView``` event:
+
 ``` json
 var json = {
     "widget": "com.avermedia.example.widget1",

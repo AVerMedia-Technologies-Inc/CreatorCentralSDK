@@ -22,6 +22,9 @@ These events will be sent to Package. The Property View won't receive them.
 | propertyViewDidAppear | When user selected a widget on the panel, the package will receive this event. |
 | propertyViewDidDisappear | When user selected a different widget on the panel, the package will receive this event.  |
 | sendToPackage | When user selected a different widget on the panel, the package will receive this event.  |
+| didReceiveWidgetTitle | Event received after sending the getWidgetTitle event or user change the title manually. | 
+| didReceiveWidgetIcon | Event received after sending the getWidgetIcon event or user select an icon from icon builder or local disk manually. |
+| didReceiveFontAttribute | Event received after sending the getFontAttribute event or user change the font attribute manually. |
 
 The Property View will receive these events.
 
@@ -254,6 +257,56 @@ var json = {
 | payload | A json data |
 
 When the package received this event, it will change the properties or data of a specific widget based on the JSON object.
+
+## didReceiveWidgetTitle
+
+``` json
+var json = {
+    "event": "didReceiveWidgetTitle", 
+    "payload": [<array of widget title>]
+};
+```
+
+| Members | Description |
+| -------- | -------- |
+| event | didReceiveWidgetTitle |
+| payload | A json data contains the array of widget title. | 
+
+## didReceiveWidgetIcon
+
+``` json
+var json = {
+    "event": "didReceiveWidgetIcon", 
+    "payload": [<array of widget icon>]
+};
+```
+
+| Members | Description |
+| -------- | -------- |
+| event | didReceiveWidgetIcon |
+| payload | A json data contains the array of widget icon. | 
+
+## didReceiveFontAttribute
+
+``` json
+var json = {
+    "event": "didReceiveFontAttribute", 
+    "payload": {
+    		"family": "Arial",
+    		"size": 13,
+    		"color": "#ff8000",
+    		"hAlignment": "center",
+    		"bold": false,
+    		"italic": false,
+    		"underLine": false
+    	}
+};
+```
+
+| Members | Description |
+| -------- | -------- |
+| event | didReceiveFontAttribute |
+| payload | A json data contains the attributes of widget. | 
 
 ## sendToPropertyView
 The property view will receive a **sendToPropertyView** event when the package sends a **sendToPropertyView** event:
