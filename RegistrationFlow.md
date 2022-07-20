@@ -82,7 +82,7 @@ foo.exe -port port -packageUUID packageUUID -registerEvent registerEvent -info i
 
 ## Property View Registration
 
-If a widget is configurable, you should provide a HTML page for the property view.
+If a widget is configurable, you should provide an HTML page for the property view.
 A property view registration is similar to [JavaScript Package Registration](#javascript-package-registration) but with extra arguments.
 These parameters contain the port and unique identifier to use for communication with the Creator Central application.
 Your JavaScript function would be as below:

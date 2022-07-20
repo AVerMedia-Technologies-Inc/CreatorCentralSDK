@@ -77,18 +77,18 @@ Developers should modify the fields for your Package/Widget.
 
 ### Main
 
-| Members        | Type     | Description                                                                                                                                                                                                                                          |
-|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Author         | Required | The author of the Package. This string will be displayed to the user in Creator Central Widget Store.                                                                                                                                                |
-| Description    | Required | Provides a general description of what the package does. This string will be displayed to the user in Creator Central Widget Store.                                                                                                                  |
-| Name           | Required | The name of the Package. This string will be displayed to the user in the Widget List and Creator Central Widget Store both.                                                                                                                         |
-| UUID           | Required | This is a unique identifier used to identify the package. The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. |
-| Icon           | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now.                       |
-| URL            | Optional | A site to provide more information about the package.                                                                                                                                                                                                |
-| Version        | Required | Package's semantic version (1.0.0).                                                                                                                                                                                                                  |
-| Runtime        | Required | Package executable file and platform information. See [Runtime](#runtime).                                                                                                                                                                           |
-| CreatorCentral | Required | Minimal supported Creator Central App version and SDK version of this Package. See [CreatorCentral](#creatorcentral).                                                                                                                                |
-| Widgets        | Required | An array of widgets in this Package. One Package can have one or multiple widgets. See [Widgets](#widgets).                                                                                                                                          |
+| Members        | Type     | Description                                                                                                                                                                                                                    |
+|----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Author         | Required | The author of the Package. This string will be displayed to the user in Creator Central Widget Store.                                                                                                                          |
+| Description    | Required | Provides a general description of what the package does. This string will be displayed to the user in Creator Central Widget Store.                                                                                            |
+| Name           | Required | The name of the Package. This string will be displayed to the user in the Widget List and Creator Central Widget Store both.                                                                                                   |
+| UUID           | Required | This is a unique identifier used to identify the package. See [Package Unique Identifier](Architecture.md#package-unique-identifier).                                                                                          |
+| Icon           | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now. |
+| URL            | Optional | A site to provide more information about the package.                                                                                                                                                                          |
+| Version        | Required | Package's semantic version (1.0.0).                                                                                                                                                                                            |
+| Runtime        | Required | Package executable file and platform information. See [Runtime](#runtime).                                                                                                                                                     |
+| CreatorCentral | Required | Minimal supported Creator Central App version and SDK version of this Package. See [CreatorCentral](#creatorcentral).                                                                                                          |
+| Widgets        | Required | An array of widgets in this Package. One Package can have one or multiple widgets. See [Widgets](#widgets).                                                                                                                    |
 
 
 ### Runtime
@@ -124,18 +124,18 @@ Package can list its minimal supported version of Creator Central App version an
 
 One Package can have one or multiple widgets. For example, our [NumberToolbox](https://github.com/AVerMedia-Technologies-Inc/NumberToolbox) sample has 2 widgets: *Count* and *Random*.
 
-| Member             | Type     | Description                                                                                                                                                                                |
-|--------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name               | Required | The name of the widget. This string will be displayed to the user in the Widget List.                                                                                                      |
-| Icon               | Required | Widget icon resource file path. This icon will be displayed to the user in the Widget List. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now.      |
-| Tooltip            | Optional | The string is displayed as a tooltip when the user leaves the mouse over your widget in the Widget List.                                                                                   |
-| UUID               | Required | The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. |
-| PropertyViewPath   | Optional | The relative path to the Property View HTML file. If missing, the widget will have no Property View.                                                                                       |
-| TitleEditable      | Optional | Indicates if the Widget title can be changed by user. False is read-only. Default value is true.                                                                                           |
-| TitleViewEditable  | Optional | Indicates if the Widget title style can be changed by user. False is read-only. Default value is true.                                                                                     |
-| IconEditable       | Optional | Indicates if the Widget icon can be changed by user. False is read-only. Default value is true.                                                                                            |
-| States             | Required | Specifies an array of states. See [States](#states).                                                                                                                                       |
-| Layouts            | Optional | Specifies an array of layouts. See [Layouts](#layouts). If no layout information is provided, the widget will be treated as a 1 * 1 sized.                                                 |
+| Member             | Type     | Description                                                                                                                                                                           |
+|--------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name               | Required | The name of the widget. This string will be displayed to the user in the Widget List.                                                                                                 |
+| Icon               | Required | Widget icon resource file path. This icon will be displayed to the user in the Widget List. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now. |
+| Tooltip            | Optional | The string is displayed as a tooltip when the user leaves the mouse over your widget in the Widget List.                                                                              |
+| UUID               | Required | The unique identifier of the widget. See [Package Unique Identifier](Architecture.md#package-unique-identifier) as well.                                                              |
+| PropertyViewPath   | Optional | The relative path to the Property View HTML file. If missing, the widget will have no Property View.                                                                                  |
+| TitleEditable      | Optional | Indicates if the Widget title can be changed by user. False is read-only. Default value is true.                                                                                      |
+| TitleViewEditable  | Optional | Indicates if the Widget title style can be changed by user. False is read-only. Default value is true.                                                                                |
+| IconEditable       | Optional | Indicates if the Widget icon can be changed by user. False is read-only. Default value is true.                                                                                       |
+| States             | Required | Specifies an array of states. See [States](#states).                                                                                                                                  |
+| Layouts            | Optional | Specifies an array of layouts. See [Layouts](#layouts). If no layout information is provided, the widget will be treated as a 1 * 1 sized.                                            |
 
 
 #### States
