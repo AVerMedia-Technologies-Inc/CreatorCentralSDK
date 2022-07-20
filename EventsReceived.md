@@ -32,19 +32,23 @@ The Property View will receive these events. The Package won't receive them.
 
 
 ## Events can be received in Package and Property View
+
 ### On Widget Settings Arrived
+
 This event will be sent to Package and Property View under the following scenario.
 - A [getWidgetSettings](EventsSent.md#get-widget-settings) event is sent to retrieve the persistent data stored for the widget.
 - A Widget is loaded to be displayed in the Panel.
 - A [setWidgetSettings](EventsSent.md#set-widget-settings) event is sent to store a persistent copy for the widget.
+
 ``` json
-let json = {
-    "widget": "com.avermedia.example.widget1", 
-    "event": "didReceiveWidgetSettings", 
-    "context": <uniqueIdentifier>, 
-    "payload": {<json data>}
-};
+{
+    "widget": "com.avermedia.example.widget1",
+    "event": "didReceiveWidgetSettings",
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                                    |
 |---------|------------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.       |
@@ -54,13 +58,16 @@ let json = {
 
 
 ### On Package Settings Arrived
+
 A `didReceivePackageSettings` event will be received after sending the [getPackageSettings](EventsSent.md#get-package-settings) event to retrieve the persistent data stored for the Package.
+
 ``` json
-let json = {
-    "event": "didReceivePackageSettings", 
-    "payload": {<json data>}
-};
+{
+    "event": "didReceivePackageSettings",
+    "payload": { }
+}
 ```
+
 | Members | Description                                    |
 |---------|------------------------------------------------|
 | event   | didReceivePackageSettings                      |
@@ -68,18 +75,22 @@ let json = {
 
 
 ## Events can be received in Package only
+
 ### Action Down
+
 When the user presses a display view on the panel or a function key of AX devices, the package will receive the `actionDown` event.
+
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "actionDown", 
-    "context": <uniqueIdentifier>,
+    "event": "actionDown",
+    "context": "<uniqueIdentifier>",
     "payload": {
         "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -95,17 +106,20 @@ The payload object contains the following members:
 
 
 ### Action Up
+
 When the user releases his finger from the panel or a function key of AX devices, the package will receive the `actionUp` event.
+
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "actionUp", 
-    "context": <uniqueIdentifier>,
+    "event": "actionUp",
+    "context": "<uniqueIdentifier>",
     "payload": {
         "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -121,17 +135,20 @@ The payload object contains the following members:
 
 
 ### Action Triggered
+
 When the user presses a display view and then releases within it, the package will receive the `actionTriggered` event.
+
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "actionTriggered", 
-    "context": <uniqueIdentifier>,
+    "event": "actionTriggered",
+    "context": "<uniqueIdentifier>",
     "payload": {
         "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -147,21 +164,23 @@ The payload object contains the following members:
 
 
 ### Widget Appear
+
 The package will receive `willAppear` event when:
 - A user switches profiles.
 - A user drags a widget from Widget List to Panel.
 - Creator Central is started
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "widgetWillAppear", 
-    "context": <uniqueIdentifier>,
+    "event": "widgetWillAppear",
+    "context": "<uniqueIdentifier>",
     "payload": {
         "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -177,21 +196,23 @@ The payload object contains the following members:
 
 
 ### Widget Disappear
+
 The package will receive `willDisappear` event when:
 - A user switches profiles.
 - A user deletes a widget.
 - An instance of a widget becomes invisible
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "widgetWillDisappear", 
-    "context": <uniqueIdentifier>,
+    "event": "widgetWillDisappear",
+    "context": "<uniqueIdentifier>",
     "payload": {
         "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -207,15 +228,17 @@ The payload object contains the following members:
 
 
 ### Property View Appear
+
 The package will receive `propertyViewDidAppear` event when the Property View is displayed in the Panel.
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "propertyViewDidAppear", 
-    "context": <uniqueIdentifier>
-};
+    "event": "propertyViewDidAppear",
+    "context": "<uniqueIdentifier>"
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -224,14 +247,17 @@ let json = {
 
 
 ### Property View Disappear
+
 The package will receive `propertyViewDidDisappear` event when the Property View is removed from the Panel.
+
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "propertyViewDidDisappear", 
-    "context": <uniqueIdentifier>
-};
+    "event": "propertyViewDidDisappear",
+    "context": "<uniqueIdentifier>"
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -240,16 +266,18 @@ let json = {
 
 
 ### On Package Message Arrived
+
 The package will receive a `sendToPackage` event when the property view sends a [sendToPackage](EventsSent.md#send-to-package) event:
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "sendToPackage", 
-    "context": <uniqueIdentifier>,
-    "payload": {<json data>}
-};
+    "event": "sendToPackage",
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -267,13 +295,14 @@ The package will receive `didReceiveWidgetTitle` event when:
 - A user changes the title of the widget.
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
     "event": "didReceiveWidgetTitle",
-    "context": <uniqueIdentifier>,
-    "payload": [<array of widget title>]
-};
+    "context": "<uniqueIdentifier>",
+    "payload": [ ]
+}
 ```
+
 | Members | Description                                     |
 |---------|-------------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.        |
@@ -289,13 +318,14 @@ The package will receive `didReceiveWidgetIcon` event when:
 - A user changes the icon of the widget.
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
     "event": "didReceiveWidgetIcon",
-    "context": <uniqueIdentifier>,
-    "payload": [<array of widget icon>]
-};
+    "context": "<uniqueIdentifier>",
+    "payload": [ ]
+}
 ```
+
 | Members | Description                                    |
 |---------|------------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.       |
@@ -304,25 +334,26 @@ let json = {
 | payload | A JSON data contains the array of widget icon. | 
 
 ### On Widget Title Style Arrived
+
 The package will receive `didReceiveFontAttribute` event when:
 - A [getFontAttribute](EventsSent.md#get-widget-title-style) event is sent.
 - A user changes the font attribute manually.
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
     "event": "didReceiveFontAttribute",
-    "context": <uniqueIdentifier>,
+    "context": "<uniqueIdentifier>",
     "payload": {
-    		"family": "Arial",
-    		"size": 13,
-    		"color": "#ff8000",
-    		"hAlignment": "center",
-    		"bold": false,
-    		"italic": false,
-    		"underLine": false
-    	}
-};
+        "family": "Arial",
+        "size": 13,
+        "color": "#ff8000",
+        "hAlignment": "center",
+        "bold": false,
+        "italic": false,
+        "underLine": false
+    }
+}
 ```
 
 | Members | Description                                    |
@@ -334,17 +365,20 @@ let json = {
 
 
 ## Events can be received in Package and Property View
+
 ### On Property Message Received
+
 The property view will receive a `sendToPropertyView` event when the package sends a [sendToPropertyView](EventsSent.md#send-to-property-view) event:
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
-    "event": "sendToPropertyView", 
-    "context": <uniqueIdentifier>,
-    "payload": {<json data>}
-};
+    "event": "sendToPropertyView",
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |

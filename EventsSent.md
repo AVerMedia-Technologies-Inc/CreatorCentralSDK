@@ -33,6 +33,7 @@ The following events are exclusive to Property View:
 
 
 ## Events available for Package and Property View
+
 ### Set Widget Settings
 
 The package and property view can save data persistently for the widget's instance using the `setWidgetSettings` event. 
@@ -40,12 +41,13 @@ Note that the property view will automatically receive a [didReceiveWidgetSettin
 Similarly, the package will automatically receive a [didReceiveWidgetSettings](EventsReceived.md#on-widget-settings-arrived) event with the new settings when the property view sends this event.
 
 ``` json
-let json = {
+{
     "event": "setWidgetSettings",
-    "context": uniqueValue,
-    "payload": {<json data>}
-};
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                                                          |
 |---------|----------------------------------------------------------------------|
 | event   | setWidgetSettings                                                    |
@@ -58,10 +60,10 @@ let json = {
 The package and property view can request the persistent data stored for the widget's instance using the `getWidgetSettings` event.
 
 ``` json
-let json = {
+{
     "event": "getWidgetSettings",
-    "context": uniqueIdentifier
-};
+    "context": "<uniqueIdentifier>"
+}
 ```
 | Members | Description                                   |
 |---------|-----------------------------------------------|
@@ -75,14 +77,15 @@ The package and property view will receive a [didReceiveWidgetSettings](EventsRe
 The package and property view can use this event to save tokens that should be available to every widget in the package.
 
 ``` json
-let json = {
+{
     "event": "setPackageSettings",
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
-        "settings": {<json data>}
+        "settings": { }
     }
-};
+}
 ```
+
 | Members | Description                                                                             |
 |---------|-----------------------------------------------------------------------------------------|
 | event   | setPackageSettings                                                                      |
@@ -98,11 +101,12 @@ Similarly, when the Property View uses this API, the package will also receive a
 The package and Property View can request the persistent data which available to every widget in the package using the `getPackageSettings` event:
 
 ``` json
-let json = {
+{
     "event": "getPackageSettings",
-    "context": uniqueIdentifier
-};
+    "context": "<uniqueIdentifier>"
+}
 ```
+
 | Members | Description                               |
 |---------|-------------------------------------------|
 | event   | getPackageSettings                        |
@@ -114,14 +118,16 @@ The package or Property View will receive an event [didReceivePackageSettings](E
 ### Send Log
 
 The package and Property View can use the `sendLog` event to write a debug message to the logs file:
+
 ``` json
-let json = {
+{
     "event": "sendLog",
     "payload": {
         "message": "Something need to be saved."
     }
-};
+}
 ```
+
 | Members | Description   |
 |---------|---------------|
 | event   | sendLog       |
@@ -137,14 +143,16 @@ The payload object contains the following members:
 ### Open Url
 
 The package and Property View can use the `openUrl` event to open a webpage in the external browser:
+
 ``` json
-let json = {
+{
     "event": "openUrl",
     "payload": {
         "url": "https://www.avermedia.com"
     }
-};
+}
 ```
+
 | Members | Description   |
 |---------|---------------|
 | event   | openUrl       |
@@ -158,20 +166,22 @@ The payload object contains the following members:
 
 
 ## Package Only Events
+
 ### Change Widget Title
 
 The package can send a `changeTitle` event to the Creator Central application to change the title displayed on the display view of widget for a specific state.
 
 ``` json 
-let json = {
+{
     "event": "changeTitle", 
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
         "title": "New Title",
-        "state": zero-based integer
+        "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | changeTitle                                   |
@@ -191,14 +201,15 @@ The payload object contains the following members:
 The package can send a `changeImage` event to the Creator Central application to change the image displayed on the display view of widget.
 
 ``` json 
-let json = {
+{
     "event": "changeImage", 
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
-        "image": <base64 encoded image>
+        "image": "<base64 encoded image>"
     }
 };
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | changeImage                                   |
@@ -213,16 +224,19 @@ The payload object contains the following members:
 
 
 ### Change Widget State
+
 The package can change the state of a widget that supports multiple states. These states are defined in [PackageConfig.json](PackageConfiguration.md)
+
 ``` json
-let json = {
+{
     "event": "changeState",
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
-        "state": zero-based integer
+        "state": 0
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | changeState                                   |
@@ -241,20 +255,21 @@ The payload object contains the following members:
 The package can send a `changeFontAttribute` event to the Creator Central application to change the font attributes of widget.
 
 ``` json 
-let json = {
+{
     "event": "changeFontAttribute", 
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
         "family": "Arial", 
-        "size": 18, // support 6 ~ 18 
+        "size": 18,
         "color": "#ff8000", 
-        "hAlignment": "left", // left, right, center 
+        "hAlignment": "left",
         "bold": true, 
         "italic": true, 
         "underLine": true
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | changeFontAttribute                           |
@@ -279,15 +294,16 @@ The payload object contains the following members:
 The package can send a `changeActionEffect` event to Creator Central application to change the effect displayed on the display view of widget.
 
 ``` json
-let json = {
+{
     "event": "changeActionEffect",
-    "context": uniqueIdentifier,
+    "context": "<uniqueIdentifier>",
     "payload": {
         "type": "press|clear|invalid|inactive", 
-        "image": <base64 encoded image>
+        "image": "<base64 encoded image>"
     }
-};
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | changeActionEffect                            |
@@ -296,10 +312,10 @@ let json = {
 
 The payload object contains the following members:
 
-| Payload  | Required | Description                                                                                                                                                                                    |
-|----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| type     | Required | Only supports "press", "invalid", and "clear" now.<br/><ul><li>press: widget is pressed</li><li>invalid: widget is disabled</li><li>clear: restore original state</li><li>inactive: </li></ul> |
-| image    | Optional | The image to display encoded in base64 with the image format declared in the mime type.                                                                                                        |
+| Payload  | Required | Description                                                                                                                                                                                            |
+|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type     | Required | Only supports "press", "invalid", and "clear" now.<br/><ul><li>press: widget is pressed</li><li>invalid: widget is disabled</li><li>clear: restore original state</li><li>inactive: reserved</li></ul> |
+| image    | Optional | The image to display encoded in base64 with the image format declared in the mime type.                                                                                                                |
 
 
 ### Get Widget Title
@@ -307,17 +323,18 @@ The payload object contains the following members:
 Request the title list of the widget's instance.
 
 ``` json
-let json = {
+{
     "event": "getWidgetTitle",
-    "context": uniqueIdentifier
-};
+    "context": "<uniqueIdentifier>"
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | getWidgetTitle                                |
 | context | A unique identifier of the widget's instance. |
 
-The package and Property View will receive a [didReceiveWidgetTitle](EventsReceived.md#on-widget-title-arrived) event containing the global settings:
+The package and Property View will receive a [didReceiveWidgetTitle](EventsReceived.md#on-widget-title-arrived) event containing the settings.
 
 
 ### Get Widget Icon
@@ -325,17 +342,18 @@ The package and Property View will receive a [didReceiveWidgetTitle](EventsRecei
 Request the icon list of the widget's instance.
 
 ``` json
-let json = {
+{
     "event": "getWidgetIcon",
-    "context": uniqueIdentifier
-};
-``` 
+    "context": "<uniqueIdentifier>"
+}
+```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | event   | getWidgetIcon                                 |
 | context | A unique identifier of the widget's instance. |
 
-The package and Property View will receive a [didReceiveWidgetIcon](EventsReceived.md#on-widget-icon-arrived) event containing the global settings:
+The package and Property View will receive a [didReceiveWidgetIcon](EventsReceived.md#on-widget-icon-arrived) event containing the settings.
 
 
 ### Get Widget Title Style
@@ -343,15 +361,18 @@ The package and Property View will receive a [didReceiveWidgetIcon](EventsReceiv
 The package can request the icon list of an instance of widget using the `getFontAttribute` event.
 
 ``` json
-let json = {
+{
     "event": "getFontAttribute",
-    "context": uniqueIdentifier
-};
-``` 
+    "context": "<uniqueIdentifier>"
+}
+```
+
 | Members | Description                              |
 |---------|------------------------------------------|
 | event   | getFontAttribute                         |
 | context | A value to identify the widget instance. |
+
+The package and Property View will receive a [didReceiveFontAttribute](EventsReceived.md#on-widget-title-style-arrived) event containing the settings.
 
 
 ### Send To Property View
@@ -359,13 +380,14 @@ let json = {
 The package can send a payload to the Property View using the `sendToPropertyView` event:
 
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
     "event": "sendToPropertyView",
-    "context": uniqueIdentifier,
-    "payload": {<json data>}
-};
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                              |
 |---------|------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json. |
@@ -373,15 +395,7 @@ let json = {
 | context | A value to identify the widget instance. |
 | payload | A JSON object                            |
 
-The property view will receive event `sendToPropertyView` containing the payload:
-``` json
-let json = {
-    "widget": "com.avermedia.example.widget1",
-    "event": "sendToPropertyView",
-    "context": uniqueIdentifier,
-    "payload": {<json data>}
-};
-```
+The property view will receive a [sendToPropertyView](EventsReceived.md#on-property-message-received) event containing the payload.
 
 
 ## Property View Only Events
@@ -389,13 +403,14 @@ let json = {
 
 The property view can send a payload to the package using the `sendToPackage` event:
 ``` json
-let json = {
+{
     "widget": "com.avermedia.example.widget1",
     "event": "sendToPackage",
-    "context": uniqueIdentifier,
-    "payload": {<json data>}
-};
+    "context": "<uniqueIdentifier>",
+    "payload": { }
+}
 ```
+
 | Members | Description                                   |
 |---------|-----------------------------------------------|
 | widget  | The widget's UUID in PackageConfig.json.      |
@@ -403,13 +418,4 @@ let json = {
 | context | A unique identifier of the widget's instance. |
 | payload | A JSON object                                 |
 
-The package will receive event `sendToPackage` containing the payload:
-
-``` json
-let json = {
-    "widget": "com.avermedia.example.widget1",
-    "event": "sendToPackage",
-    "context": uniqueIdentifier,
-    "payload": {<json data>}
-};
-```
+The package will receive a [sendToPackage](EventsReceived.md#on-package-message-arrived) event containing the payload.

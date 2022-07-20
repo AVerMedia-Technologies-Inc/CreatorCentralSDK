@@ -1,30 +1,29 @@
-Package Configuration
-===
-
+# Package Configuration
 
 ## PackageConfig.json Example
 
-Here is an example of PackageConfig.json file. Developers should modify the fields for your Package/Widget.
+Here is an example of [PackageConfig.json](https://github.com/AVerMedia-Technologies-Inc/NumberToolbox/blob/main/Source/PackageConfig.json) file from our [NumberToolbox](https://github.com/AVerMedia-Technologies-Inc/NumberToolbox) sample.
+Developers should modify the fields for your Package/Widget.
 
 ``` json 
 {
-    "Author": "AVerMedia",
-    "Description": "This kit includes two display types of lighting effects, allowing users to choose according to the space and the required information.",
-    "Name": "AX Lighting EFX",
-    "UUID": "com.avermedia.package.lighting.toolbox",
-    "Icon": "images/packageAxLightingIcon",
+    "Author": "Mike Yeh",
+    "Description": "This kit contains counter and random number generator toolbox",
+    "Name": "Number Toolbox",
+    "UUID": "com.avermedia.package.number.toolbox",
+    "Icon": "images/mainpage_btn_tool_counter.svg",
     "URL": "https://www.avermedia.com/gaming/creatorcentral",
     "Version": "1.0.0",
     "Runtime": {
         "mac": {
             "type": "bin",
-            "target": "AXLighting",
+            "target": "Template.app",
             "MinimumVersion": "11.0"
         },
         "win": {
             "type": "bin",
-            "target": "AXLighting",
-            "MinimumVersion": "11.0"
+            "target": "Template.exe",
+            "MinimumVersion": "10.0"
         }
     },
     "CreatorCentral": {
@@ -33,70 +32,44 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
     },
     "Widgets": [
         {
-            "Name": "Turn on/off AX lighting effects.",
-            "Icon": "images/toggleIcon",
-            "Tooltip": "Turn on/off AX lighting effects.",
-            "UUID": "com.avermedia.axlighting.toggle",
-            "PropertyViewPath": "property/index1.html",
+            "Name": "Counter",
+            "Icon": "images/mainpage_btn_tool_counter.svg",
+            "Tooltip": "Counter",
+            "UUID": "com.avermedia.widget.counter",
+            "PropertyViewPath": "property/counter/index.html",
             "States": [
                 {
-                    "Image": "images/fullIcon",
-                    "Title": "On"
-                },
-                {
-                    "Image": "images/liteIcon",
-                    "Title": "Off"
+                    "Image": "images/mainpage_btn_tool_counter.svg",
+                    "Title": "Counter"
                 }
             ],
             "Layouts": [
                 {
-                    "Title": "Full",
-                    "Icon": "images/fullLayoutIcon",
-                    "Width": 4,
-                    "Height": 3
-                },
-                {
-                    "Title": "Lite",
-                    "Icon": "images/liteLayoutIcon",
+                    "Title": "Counter",
+                    "Icon": "images/mainpage_btn_tool_counter.svg",
                     "Width": 1,
-                    "Height": 2
+                    "Height": 1
                 }
             ]
         },
         {
-            "Name": "Set AX Lighting Effect Mode.",
-            "Icon": "images/modeIcon",
-            "Tooltip": "Switch the lighting effect mode of AX.",
-            "UUID": "com.avermedia.axlighting.mode",
-            "PropertyViewPath": "property/index2.html",
+            "Name": "Random",
+            "Icon": "images/mainpage_btn_tool_random_number.svg",
+            "Tooltip": "Random",
+            "UUID": "com.avermedia.widget.random.generator",
+            "PropertyViewPath": "property/random/index.html",
             "States": [
                 {
-                    "Image": "images/01",
-                    "Title": "Stream"
-                },
-                {
-                    "Image": "images/02",
-                    "Title": "Record"
+                    "Image": "images/mainpage_btn_tool_random_number_bg.svg",
+                    "Title": "Random"
                 }
             ],
-            "Layouts": [
-                {
-                    "Title": "Full",
-                    "Icon": "images/fullIcon",
-                    "Width": 2,
-                    "Height": 2
-                },
-                {
-                    "Title": "Lite",
-                    "Icon": "images/liteIcon",
-                    "Width": 1,
-                    "Height": 4
-                }
-            ]
+            "TitleEditable": true,
+            "TitleViewEditable": true,
+            "IconEditable": true
         }
     ]
 }
-
 ```
 
 
@@ -104,73 +77,99 @@ Here is an example of PackageConfig.json file. Developers should modify the fiel
 
 ### Main
 
-| Members        | Type     | Description|
-| - | - | - |
-| Widgets        | Required | An array of widgets in this Package. One Package can have one or multiple widgets. For example, the Stream Live package can contain 3 widgets: Set Current Scene, Set Current Source, and Start to Record|
-| Author         | Required | The author of the Package. This string will be displayed to the user in Creator Central Widget Store.|
-| Description    | Required | Provides a general description of what the package does. This string will be displayed to the user in Creator Central Widget Store.|
-| Name           | Required | The name of the package. This string will be displayed to the user in the Widget List and Creator Central Widget Store both.|
-| UUID | Required | This is a unique identifier used to identify the package. The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. For example, a **System** package made by AVerMedia(avermedia.com). We suggest to use **com.avermedia.system** as the unique identifier. |
-| Icon | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both. The Recommended image size is 75 x 54 in pixel. |
-| URL | Optional | A site to provide more information about the package.|
-| Version | Required | Package's semantic version (1.0.0)|
-| Runtime | Required | The relative path to the HTML/binary file containing the package code.|
-| CreatorCentral | Required | Minimal supported Creator Central App version and SDK version  of this Package. |
+| Members        | Type     | Description                                                                                                                                                                                                                                          |
+|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Author         | Required | The author of the Package. This string will be displayed to the user in Creator Central Widget Store.                                                                                                                                                |
+| Description    | Required | Provides a general description of what the package does. This string will be displayed to the user in Creator Central Widget Store.                                                                                                                  |
+| Name           | Required | The name of the Package. This string will be displayed to the user in the Widget List and Creator Central Widget Store both.                                                                                                                         |
+| UUID           | Required | This is a unique identifier used to identify the package. The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. |
+| Icon           | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List and Creator Central Widget Store both. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now.                       |
+| URL            | Optional | A site to provide more information about the package.                                                                                                                                                                                                |
+| Version        | Required | Package's semantic version (1.0.0).                                                                                                                                                                                                                  |
+| Runtime        | Required | Package executable file and platform information. See [Runtime](#runtime).                                                                                                                                                                           |
+| CreatorCentral | Required | Minimal supported Creator Central App version and SDK version of this Package. See [CreatorCentral](#creatorcentral).                                                                                                                                |
+| Widgets        | Required | An array of widgets in this Package. One Package can have one or multiple widgets. See [Widgets](#widgets).                                                                                                                                          |
+
+
+### Runtime
+
+The relative path to the HTML/binary file containing the package code.
+
+| Member | Type     | Description      |
+|--------|----------|------------------|
+| mac    | Required | macOS platform   |
+| win    | Required | Windows platform |
+
+Each platform needs to specify its executable files and platform requirements.
+A web application will be loaded into an internal Chromium-based browser instance and a binary application will be started in the background.
+
+| Member         | Type     | Description                                                            |
+|----------------|----------|------------------------------------------------------------------------|
+| Type           | Required | The type of the package executable. <ul><li>web</li><li>bin</li></ul>  |
+| Target         | Required | The relative path to the HTML/binary file containing the package code. |
+| MinimumVersion | Required | The minimum version of platform.                                       |
+
+
+### CreatorCentral
+
+Package can list its minimal supported version of Creator Central App version and SDK version.
+
+| Member         | Type     | Description                             |
+|----------------|----------|-----------------------------------------|
+| MinimumVersion | Required | The minimum version of Creator Central. |
+| SDKVersion     | Required | The current SDK version is 2.           |
 
 
 ### Widgets
 
-| Member   | Type     | Description |
-| -------- | -------- | ----------- |
-| Icon     | Required | The relative path to a PNG image. This image will be displayed to the user in the Widget List. The Recommended image size is 75 x 54 in pixel. |
-| Name     | Required | The name of the widget. This string will be displayed to the user in the Widget List. |
-| States   | Required | Each widget can have one or more states. For example, the Mute widget may have two states, mute and unmute. Ask the action to change its state by sending a changeState event. |
-| Layouts   | Optional | Specifies an array of layouts. Each widget can have one or more layouts. For example, the Clock widget can have two different layouts. One is analog and another is digital. |
-| Tooltip  | Optional | The string is displayed as a tooltip when the user leaves the mouse over your widget in the Widget List. |
-| UUID | Required | The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. For example, a **Lighting Toggle** widget made by AVerMedia(avermedia.com). We will use **com.avermedia.axlighting.toggle** as the unique identifier.  |
-| PropertyViewPath | Optional | The relative path to the Property View HTML file. If missing, the widget will have an empty Property View. |
+One Package can have one or multiple widgets. For example, our [NumberToolbox](https://github.com/AVerMedia-Technologies-Inc/NumberToolbox) sample has 2 widgets: *Count* and *Random*.
+
+| Member             | Type     | Description                                                                                                                                                                                |
+|--------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name               | Required | The name of the widget. This string will be displayed to the user in the Widget List.                                                                                                      |
+| Icon               | Required | Widget icon resource file path. This icon will be displayed to the user in the Widget List. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now.      |
+| Tooltip            | Optional | The string is displayed as a tooltip when the user leaves the mouse over your widget in the Widget List.                                                                                   |
+| UUID               | Required | The unique identifier must be contained only lowercase alphanumeric characters(a-z, 0-9), hyphen(-), and period(.). We strongly suggest to name your identifier in **reverse-DNS** format. |
+| PropertyViewPath   | Optional | The relative path to the Property View HTML file. If missing, the widget will have no Property View.                                                                                       |
+| TitleEditable      | Optional | Indicates if the Widget title can be changed by user. False is read-only. Default value is true.                                                                                           |
+| TitleViewEditable  | Optional | Indicates if the Widget title style can be changed by user. False is read-only. Default value is true.                                                                                     |
+| IconEditable       | Optional | Indicates if the Widget icon can be changed by user. False is read-only. Default value is true.                                                                                            |
+| States             | Required | Specifies an array of states. See [States](#states).                                                                                                                                       |
+| Layouts            | Optional | Specifies an array of layouts. See [Layouts](#layouts). If no layout information is provided, the widget will be treated as a 1 * 1 sized.                                                 |
 
 
-### States
+#### States
 
-| Member | Type     | Description                      |
-| ------ | -------- | -------------------------------- |
-| Image  | Required | The default image for the state. The Recommended image size is 75 x 54 in pixel. |
+Each widget can have one or more states. For example, the Switch widget can have two states, ON and OFF.
+The package can send a [changeState](EventsSent.md#change-widget-state) event.
+
+| Member | Type     | Description                                                                                                                |
+|--------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| Image  | Required | The default image for the state. The Recommended image size is 75 x 54 in pixel. Creator Central supports PNG and SVG now. |
+| Name   | Optional | The default name of the state.                                                                                             |
 
 
-### Layouts
+#### Layouts
 
-Creator Central supports multiple layouts defined by widgets in the package to meet functional needs. The unit of width and height is a grid on the panel. The total size of the panel is a 5 * 4 grid. This means you can use sizes from 1 * 1 to 5 * 4 to design your widgets to meet specific functional needs. The reference image size is list as below.
+Creator Central supports multiple layouts defined by widgets in the package to meet functional needs.
+The unit of width and height is a grid on the panel. The total size of the panel is a 5 * 4 grid.
+This means you can use sizes from 1 * 1 to 5 * 4 to design your widgets to meet specific functional needs.
 
+| Members | Type     | Description                                                                             |
+|---------|----------|-----------------------------------------------------------------------------------------|
+| Title   | Required | The string will be shown on Widget List.                                                |
+| Icon    | Required | The image will be shown on Widget List. The recommend image size is 120 x 120 in pixel. |
+| Width   | Required | The width of display view in grid. Maximum is 5.                                        |
+| Height  | Required | The height of display view in grid. Maximum is 4.                                       |
+
+The reference grid size is listed as below.
 
 | Grid | Width | Height |
-| - | - | - |
-| 1 | 150 | 108 |
-| 2 | 308 | 224 |
-| 3 | 466 | 340 |
-| 4 | 624 | 456 |
-| 5 | 782 | --- |  
+|:----:|:-----:|:------:|
+|  1   |  150  |  108   |
+|  2   |  308  |  224   |
+|  3   |  466  |  340   |
+|  4   |  624  |  456   |
+|  5   |  782  |  ---   |
 
-| Members | Type | Description |
-| - | - | - |
-| Title | Required | The string will be shown on Widget List. |
-| Icon | Required | The image will be shown on Widget List. The recommend image size is 120 x 120 in pixel. |
-| Width  | Required | The width of display view in grid.  |
-| Height | Required | The height of display view in grid. | 
-
-### Runtime
-
-| Member         | Type     | Description                                                            |
-| -------------- | -------- | ---------------------------------------------------------------------- |
-| mac / win      | Required | The name of the platform, mac or win                                   |
-| Type           | Required | The type of the package executable, web or bin                         |
-| Target         | Required | The relative path to the HTML/binary file containing the package code. |
-| MinimumVersion | Required | The minimum version of platform. |
-
-### CreatorCentral
-
-| Member         | Type     | Description                             |
-| -------------- | -------- | --------------------------------------- |
-| MinimumVersion | Required | The minimum version of Creator Central. |
-| SDKVersion     | Required | The current SDK version is 2.           |
-
+If no layout information is provided, the widget will be treated as a 1 * 1 sized.
