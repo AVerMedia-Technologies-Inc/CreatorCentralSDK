@@ -18,7 +18,7 @@ The following events are exclusive to Package:
 | [changeTitle](#change-widget-title)                | Change widget's title of a specific state.                |
 | [changeImage](#change-widget-image)                | Change widget's image displayed now.                      |
 | [changeState](#change-widget-state)                | Apply the state to an instance of a widget.               |
-| [changeFontAttribute](#change-widget-title-style)  | Change widget's fonts and attributes of a specific state. |
+| [changeFontAttribute](#change-widget-title-style)  | Change widget's fonts and attributes.                     |
 | [changeActionEffect](#change-widget-action-effect) | Change widget's action effect.                            |
 | [getWidgetTitle](#get-widget-title)                | Request the title list for the widget's instance.         |
 | [getWidgetIcon](#get-widget-icon)                  | Request the icon list for the widget's instance.          |
