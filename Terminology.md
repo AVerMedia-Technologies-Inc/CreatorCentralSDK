@@ -20,8 +20,11 @@ Everything shows in the main panel will be identical to the device.
 
 A display view is a widget's user interface. A widget should be able to control their own interface in the display view.
 The size of the display view will be defined by Creator Central.
-Widget can show values, icons or pictures in the Display View. For example, a light switch widget has 2 state: ON and OFF.
+Widget can show values, icons or pictures in the Display View.
+
+For example, a light switch widget has 2 state: ON and OFF.
 The light switch widget can set different icons in the Display View to indicate current light state.
+
 Take CPU usage widget as another example, it will show cpu usage value with color in the Display View.
 A user can identify the cpu loading by the value and color of the widget's Display View.
 
@@ -32,5 +35,5 @@ A widget can use these properties to change its icon, title or other configurati
 
 ## Package
 
-Your Package is defined in Category property in [PackageConfig.json](PackageConfiguration.md) file.
+Your Package is defined in [PackageConfig.json](PackageConfiguration.md) file.
 All widgets with the same package will be listed together in Widget List.
