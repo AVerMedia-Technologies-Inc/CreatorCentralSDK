@@ -3,7 +3,9 @@
 
 Welcome to Creator Central SDK Version 2 documentation. We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
 
-<span style="color: red">Note: SDK V2 is still under development, so is still subject to change.</span>
+```
+Note: SDK V2 is under heavy development, so the APIs are still subject to change. Please come back and check our documents when possible.
+```
 
 ## Overview
 - You can read [Terminology](Terminology.md) about the Creator Central application.
