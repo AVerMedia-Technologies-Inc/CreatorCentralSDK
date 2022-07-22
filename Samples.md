@@ -13,7 +13,10 @@ that include a simple digital/analog clock widget.
 
 ## Sample packages for V1 SDK
 
-**Please note that we are migrating to SDK V2.** If you are about to start a new widget, please start with V2 SDK.
+**Please note that we are migrating to SDK V2.**
+
+If you are about to start a new widget, please start with V2 SDK.
+
 Migration guide is on the way.
 
 ### Clock Widget by C++

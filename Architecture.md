@@ -56,7 +56,7 @@ We strongly suggest to name your identifier in **reverse-DNS** format.
 
 For example, a **Hello World** package made by AVerMedia(avermedia.com).
 We will use `com.avermedia.helloworld` as the unique identifier of this Hello World package.
-This package has a **Morning** widget, so we can name it `com.avermedia.helloworld.morning`.
+This package has a **Morning** widget, and we can name it `com.avermedia.helloworld.morning`.
 
 
 ### Package Instance
@@ -82,10 +82,12 @@ Each Widget must also have its own Unique Identifier for the Creator Central app
 We strongly suggest to name your identifier in **reverse-DNS** format.
 You can follow the [same rule](#package-unique-identifier) for the Package.
 
+
 ### Context
 
 Creator Central will give every widget a `context` and will use it to identify them.
 Please note that it is different from its own identifier defined in [Package Configuration](PackageConfiguration.md).
+
 
 ## Property View
 
