@@ -106,3 +106,6 @@ The package will also automatically receive a [didReceiveWidgetSettings](EventsR
 
 You can also use [setPackageSettings](EventsSent.md#set-package-settings) to save some data globally for the package (third-party access key, user settings, etc.).
 But we recommend you to only use this in your Package.
+
+You can download the Property View Template for your development here.
+Please consider to apply the CSS we provided. This make the Property View more consistent to our users.

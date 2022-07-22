@@ -1,7 +1,9 @@
 # Creator Central Package SDK Version 2 (Alpha)
 ![](https://img.shields.io/github/v/release/AVerMedia-Technologies-Inc/CreatorCentralSDK?include_prereleases)
 
-Welcome to Creator Central SDK Version 2 documentation. We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
+**Welcome to Creator Central SDK Version 2 documentation.** 
+
+We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
 
 ```
 Note: SDK V2 is under heavy development, so the APIs are still subject to change.
@@ -21,13 +23,4 @@ Please come back and check our documents when possible.
 ## Deprecated Creator Central SDK V1
 You can still use [Creator Central SDK version 1](v1/README.md) in our Creator Central applications.
 We don't have timeline yet, but they will be completely removed in the future.
-Try to migrate your widgets to SDK version 2. See our migration guide for more information.
-
-## See also
-- [Terminology](Terminology.md)
-- [Architecture](Architecture.md)
-- [PackageConfig.json](PackageConfiguration.md)
-- [Registration Flow](RegistrationFlow.md)
-- [Event Sent](EventsSent.md)
-- [Events Received](EventsReceived.md)
-- [Samples](Samples.md)
+Try to migrate your widgets to SDK version 2.
