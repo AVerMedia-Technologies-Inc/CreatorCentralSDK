@@ -1,5 +1,7 @@
 # Creator Central Package SDK Version 2 (Alpha)
-![](https://img.shields.io/github/v/release/AVerMedia-Technologies-Inc/CreatorCentralSDK?include_prereleases)
+![](https://img.shields.io/badge/SDK-2.0.2-yellow)
+![](https://img.shields.io/badge/Creator%20Central-1.1.2.3-orange)
+![](https://img.shields.io/badge/Simulator-1.0.0.3-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.** 
 
