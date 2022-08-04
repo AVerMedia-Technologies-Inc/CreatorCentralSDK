@@ -1,7 +1,7 @@
 # Creator Central Package SDK Version 2 (Alpha)
-![](https://img.shields.io/badge/SDK-2.0.2-yellow)
-![](https://img.shields.io/badge/Creator%20Central-1.1.2.3-orange)
-![](https://img.shields.io/badge/Simulator-1.0.0.3-blue)
+![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.3-yellow)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.5-orange)
+![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.3-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.** 
 

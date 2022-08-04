@@ -194,7 +194,7 @@ The payload object contains the following members:
 | Members  | Description                                                                                                  |
 |----------|--------------------------------------------------------------------------------------------------------------|
 | state    | Only set when the widget has multiple states. The zero-based value contains the current state of the action. |
-| settings | This JSON object contains data that widget can set and are stored persistently. |
+| settings | This JSON object contains data that widget can set and are stored persistently.                              |
 
 
 ### Widget Disappear
