@@ -176,7 +176,8 @@ The package will receive `willAppear` event when:
     "event": "widgetWillAppear",
     "context": "<uniqueIdentifier>",
     "payload": {
-        "state": 0
+        "state": 0,
+        "settings": {}
     }
 }
 ```
@@ -193,6 +194,7 @@ The payload object contains the following members:
 | Members  | Description                                                                                                  |
 |----------|--------------------------------------------------------------------------------------------------------------|
 | state    | Only set when the widget has multiple states. The zero-based value contains the current state of the action. |
+| settings | This JSON object contains data that widget can set and are stored persistently. |
 
 
 ### Widget Disappear
