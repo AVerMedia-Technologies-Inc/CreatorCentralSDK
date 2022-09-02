@@ -8,12 +8,3 @@ Welcome to Creator Central SDK Version 2 documentation.
 We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
 
 ## Check our [Wiki](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki) page for latest update.
-
-## Legacy documents
-- [Terminology](Terminology.md)
-- [Architecture](Architecture.md)
-- [PackageConfig.json](PackageConfiguration.md)
-- [Registration Flow](RegistrationFlow.md)
-- [Event Sent](EventsSent.md)
-- [Events Received](EventsReceived.md)
-- [Samples](Samples.md)
