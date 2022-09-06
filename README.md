@@ -18,6 +18,7 @@ Please come back and check our documents when possible.
 - In [Architecture](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Architecture) section, we will discuss how will Creator Central work with your widgets.
 - Creator Central will use [PackageConfig.json](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Package-Configuration) to identify all widgets and packages.
 - Read [Registration Flow](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Registration-Flow) to understand how to start interaction with Creator Central.
+- Understand how your widget is displayed in [Display View](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Display-View)
 - You can [send events](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Send-Events-To-Creator-Central) to Creator Central and [receive events](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Receive-Events-from-Creator-Central) from Creator Central.
 - Manage your widget configuration in [Property View](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Property-View)
 - We have some [sample widgets](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Samples) that can help you start your custom widgets.
