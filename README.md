@@ -1,6 +1,6 @@
-# Creator Central Package SDK Version 2 (Alpha)
+# Creator Central Package SDK Version 2 (Beta)
 ![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.3-yellow)
-![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.5-orange)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.10-orange)
 ![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.4-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.**
@@ -23,9 +23,3 @@ Please come back and check our documents when possible.
 - Manage your widget configuration in [Property View](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Property-View)
 - We have some [sample widgets](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Samples) that can help you start your custom widgets.
 - Get your [AX devices with Creator Central](https://www.avermedia.com/gaming/creatorcentral) or try our simulator in [Releases](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases).
-
-## Deprecated Creator Central SDK V1
-You can still use [Creator Central SDK version 1](v1/README.md) widgets in our Creator Central applications.
-**They are deprecated in favor of SDK version 2.**
-We don't have timeline yet, but they will be completely removed in the future.
-Try to migrate your widgets to SDK version 2.
