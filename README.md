@@ -1,6 +1,6 @@
 # Creator Central Package SDK Version 2 (Beta)
 ![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.5-yellow)
-![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.29-orange)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.30-orange)
 ![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.6-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.**
@@ -55,8 +55,8 @@ You can now provide the localizations for PackageConfig.json. Check [Localizatio
 
 ## Downloads
 ### Creator Central App Installer
-- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.29.exe](https://s3.us-west-2.amazonaws.com/storage.avermedia.com/web_release_www/AVerMedia_Creator_Central_Installer_v1.1.2.29_23011015.exe)
-- macOS [AVerMedia+Creator+Central_V1.1.2.29.pkg](https://s3.us-west-2.amazonaws.com/storage.avermedia.com/web_release_www/software/AVerMedia+Creator+Central_V1.1.2.29.pkg)
+- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.30.exe](https://s3.us-west-2.amazonaws.com/storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_Installer_v1.1.2.30.exe)
+- macOS [AVerMedia+Creator+Central_V1.1.2.30.pkg](https://s3.us-west-2.amazonaws.com/storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_V1.1.2.30.pkg.zip)
 ### Creator Central Simulator
 - Windows [Creator.Central.Simulator_v1.0.0.6.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/Creator.Central.Simulator_v1.0.0.6.zip)
 - macOS [CreatorCentralSimulator_v1.0.0.6.dmg.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/CreatorCentralSimulator_v1.0.0.6.dmg.zip)
