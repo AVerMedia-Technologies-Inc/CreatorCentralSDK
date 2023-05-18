@@ -1,6 +1,6 @@
 # Creator Central Package SDK Version 2 (Beta)
 ![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.5-yellow)
-![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.29-orange)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.45-orange)
 ![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.6-blue)
 
 Welcome to Creator Central SDK Version 2 documentation.
