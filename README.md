@@ -8,7 +8,7 @@
 We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
 
 ```
-Note: SDK V2 is under heavy development, so the APIs are still subject to change.
+Note: SDK V2 is under development, so the APIs may still subject to change.
 
 Please come back and check our documents when possible.
 ```
