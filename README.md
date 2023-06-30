@@ -1,6 +1,6 @@
 # Creator Central Package SDK Version 2 (Beta)
 ![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.5-yellow)
-![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.45-orange)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.49-orange)
 ![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.6-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.**
@@ -26,37 +26,25 @@ Please come back and check our documents when possible.
 
 ## What's New
 
-### New Event from Creator Central
+### Upgradable built-in packages from Web Store
 
-A new [applicationWillTerminate](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Receive-Events-from-Creator-Central#get-package-settings) event to notify all packages that app will terminate after 3 seconds.
-When uninstalling a package from Creator Central, the package will also receive this message.
+Some built-in packages are now upgradable from Web Store.
 
-### Multi-Action Support SDK Widgets
+### New firmware and driver update.
 
-Your widgets can now be added to Multi-Action list.
-A new field `MultiActionSupported` is added to identify if your widget can be added. By default, it will be true.
+AX310 firmware updated to fix some device related issues.
 
-Check [PackageConfig.json](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Package-Configuration) for more information.
+### Bug fixes and improvements
 
-### Localization of PackageConfig.json
-
-You can now provide the localizations for PackageConfig.json. Check [Localization](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Package-Configuration#localization) section in [PackageConfig.json](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Package-Configuration).
-
-### Bug fixes
-
-- Add `layout` field in [widgetWillDisappear](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/wiki/Receive-Events-from-Creator-Central#widget-disappear)
-- Add retry loop to launch newly installed package.
-- Fix package process did not be terminated after uninstallation.
-- Fix switching to invalid widget state will crash the app.
-- Remove duplicated `didReceiveWidgetSettings` event when sending `propertyViewDidAppear` event.
-- Increase `changeIcon` and `changeImage` refresh rate to 16fps. (to match device limitation)
-- Simulator updated to v1.0.0.6 for SDK v2.0.5 with handful fixes
-- Add stdout/stderr output window for binary apps in Simulator.
+- Improved overall performances and interface interactions
+- Improved app stability
+- Improved user feedback flow
+- Support AVerMedia VibeEngine
 
 ## Downloads
 ### Creator Central App Installer
-- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.45.exe](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_Installer_v1.1.2.45.exe)
-- macOS [AVerMedia+Creator+Central_V1.1.2.45.pkg](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central-V1.1.2.45.pkg.zip)
+- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.49.exe](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_Installer_v1.1.2.49.exe)
+- macOS [AVerMedia+Creator+Central_V1.1.2.49.pkg](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central-V1.1.2.49.pkg.zip)
 ### Creator Central Simulator
 - Windows [Creator.Central.Simulator_v1.0.0.6.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/Creator.Central.Simulator_v1.0.0.6.zip)
 - macOS [CreatorCentralSimulator_v1.0.0.6.dmg.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/CreatorCentralSimulator_v1.0.0.6.dmg.zip)
