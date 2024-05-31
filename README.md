@@ -1,14 +1,14 @@
 # Creator Central Package SDK Version 2 (Beta)
 ![Creator Central SDK](https://img.shields.io/badge/SDK-2.0.5-yellow)
-![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.49-orange)
-![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.0.0.6-blue)
+![Creator Central](https://img.shields.io/badge/Creator%20Central-1.1.2.68-orange)
+![Creator Central Simulator](https://img.shields.io/badge/Simulator-1.1.0-blue)
 
 **Welcome to Creator Central SDK Version 2 documentation.**
 
 We will describe how you can create widgets to enhance of the ability of AVerMedia Creator Central application.
 
 ```
-Note: SDK V2 is under development, so the APIs may still subject to change.
+Note: SDK V2 is still under development, so the APIs may subject to change.
 
 Please come back and check our documents when possible.
 ```
@@ -39,13 +39,13 @@ AX310 firmware updated to fix some device related issues.
 - Improved overall performances and interface interactions
 - Improved app stability
 - Improved user feedback flow
-- Support AVerMedia VibeEngine
 
 ## Downloads
 ### Creator Central App Installer
-- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.49.exe](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_Installer_v1.1.2.49.exe)
-- macOS [AVerMedia+Creator+Central_V1.1.2.49.pkg](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central-V1.1.2.49.pkg.zip)
-### Creator Central Simulator
-- Windows [Creator.Central.Simulator_v1.0.0.6.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/Creator.Central.Simulator_v1.0.0.6.zip)
+- Windows [AVerMedia_Creator_Central_Installer_v1.1.2.68.exe](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central_Installer_v1.1.2.68.exe)
+- macOS [AVerMedia+Creator+Central_V1.1.2.63.pkg](https://storage.avermedia.com/web_release_www/software/AVerMedia_Creator_Central-V1.1.2.63.pkg.zip)
+## Creator Central Simulator
+- Windows [Creator.Central.Simulator_v1.1.0.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/Creator.Central.Simulator_v1.1.0.zip)
 - macOS [CreatorCentralSimulator_v1.0.0.6.dmg.zip](https://github.com/AVerMedia-Technologies-Inc/CreatorCentralSDK/releases/download/SDK_v2.0.5/CreatorCentralSimulator_v1.0.0.6.dmg.zip)
+
 
